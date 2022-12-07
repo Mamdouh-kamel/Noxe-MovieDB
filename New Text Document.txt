@@ -1,0 +1,4 @@
+https://api.themoviedb.org/3/trending/tv/week?api_key=2f6255e40e418dca70444c034dbca3de
+
+https://image.tmdb.org/t/p/w500/
+
