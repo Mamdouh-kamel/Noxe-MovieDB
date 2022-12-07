@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/home/static/css/main.1a7f5b43.css",
-    "main.js": "/home/static/js/main.c35700ed.js",
-    "static/js/787.7d81e7eb.chunk.js": "/home/static/js/787.7d81e7eb.chunk.js",
-    "static/media/1988378.jpg": "/home/static/media/1988378.6df4cab427c42edee7e2.jpg",
-    "static/media/hysterical-goat-360-ytshorts.savetube.me.mp4": "/home/static/media/hysterical-goat-360-ytshorts.savetube.me.067516ca9aa3a8328d41.mp4",
-    "static/media/fa-solid-900.ttf": "/home/static/media/fa-solid-900.b1a653db79258eeccc5d.ttf",
-    "static/media/1810207.jpg": "/home/static/media/1810207.aee08d2c15ca8912fd01.jpg",
-    "static/media/fa-brands-400.ttf": "/home/static/media/fa-brands-400.450a5c898f0b184b968b.ttf",
-    "static/media/fa-solid-900.woff2": "/home/static/media/fa-solid-900.41c0f706d8ce93933771.woff2",
-    "static/media/fa-brands-400.woff2": "/home/static/media/fa-brands-400.3ac6859b28be946745f9.woff2",
-    "static/media/fa-regular-400.ttf": "/home/static/media/fa-regular-400.3cd9fb8fcec4ad0f99d4.ttf",
-    "static/media/fa-regular-400.woff2": "/home/static/media/fa-regular-400.1f3772178d9e5bed38a6.woff2",
-    "static/media/no-image-300x450-1.jpg": "/home/static/media/no-image-300x450-1.c543de21c666d1a156db.jpg",
-    "static/media/fa-v4compatibility.ttf": "/home/static/media/fa-v4compatibility.e314b618134d5be20996.ttf",
-    "static/media/fa-v4compatibility.woff2": "/home/static/media/fa-v4compatibility.4ee7f902d88f819e251c.woff2",
-    "index.html": "/home/index.html",
-    "main.1a7f5b43.css.map": "/home/static/css/main.1a7f5b43.css.map",
-    "main.c35700ed.js.map": "/home/static/js/main.c35700ed.js.map",
-    "787.7d81e7eb.chunk.js.map": "/home/static/js/787.7d81e7eb.chunk.js.map"
+    "main.css": "/Noxe-MovieDB/static/css/main.a7efd41f.css",
+    "main.js": "/Noxe-MovieDB/static/js/main.01783b5f.js",
+    "static/js/787.7d81e7eb.chunk.js": "/Noxe-MovieDB/static/js/787.7d81e7eb.chunk.js",
+    "static/media/1988378.jpg": "/Noxe-MovieDB/static/media/1988378.6df4cab427c42edee7e2.jpg",
+    "static/media/hysterical-goat-360-ytshorts.savetube.me.mp4": "/Noxe-MovieDB/static/media/hysterical-goat-360-ytshorts.savetube.me.067516ca9aa3a8328d41.mp4",
+    "static/media/fa-solid-900.ttf": "/Noxe-MovieDB/static/media/fa-solid-900.b1a653db79258eeccc5d.ttf",
+    "static/media/1810207.jpg": "/Noxe-MovieDB/static/media/1810207.aee08d2c15ca8912fd01.jpg",
+    "static/media/fa-brands-400.ttf": "/Noxe-MovieDB/static/media/fa-brands-400.450a5c898f0b184b968b.ttf",
+    "static/media/fa-solid-900.woff2": "/Noxe-MovieDB/static/media/fa-solid-900.41c0f706d8ce93933771.woff2",
+    "static/media/fa-brands-400.woff2": "/Noxe-MovieDB/static/media/fa-brands-400.3ac6859b28be946745f9.woff2",
+    "static/media/fa-regular-400.ttf": "/Noxe-MovieDB/static/media/fa-regular-400.3cd9fb8fcec4ad0f99d4.ttf",
+    "static/media/fa-regular-400.woff2": "/Noxe-MovieDB/static/media/fa-regular-400.1f3772178d9e5bed38a6.woff2",
+    "static/media/no-image-300x450-1.jpg": "/Noxe-MovieDB/static/media/no-image-300x450-1.c543de21c666d1a156db.jpg",
+    "static/media/fa-v4compatibility.ttf": "/Noxe-MovieDB/static/media/fa-v4compatibility.e314b618134d5be20996.ttf",
+    "static/media/fa-v4compatibility.woff2": "/Noxe-MovieDB/static/media/fa-v4compatibility.4ee7f902d88f819e251c.woff2",
+    "index.html": "/Noxe-MovieDB/index.html",
+    "main.a7efd41f.css.map": "/Noxe-MovieDB/static/css/main.a7efd41f.css.map",
+    "main.01783b5f.js.map": "/Noxe-MovieDB/static/js/main.01783b5f.js.map",
+    "787.7d81e7eb.chunk.js.map": "/Noxe-MovieDB/static/js/787.7d81e7eb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a7f5b43.css",
-    "static/js/main.c35700ed.js"
+    "static/css/main.a7efd41f.css",
+    "static/js/main.01783b5f.js"
   ]
 }
