@@ -11,7 +11,7 @@ export default function Navbar(props) {
     <>
       <nav className={`navbar navbar-expand-lg bg-black navbar-dark mb-3`}>
         <div className="container-fluid mx-2 border-1 border-botto border-white border-opacity-25">
-          <NavLink className={`navbar-brand`} to="/home"><h2 className='fw-bold'>Noxe</h2></NavLink>
+          <NavLink className={`navbar-brand`} to="/Noxe-MovieDB"><h2 className='fw-bold'>Noxe</h2></NavLink>
           <button className={`navbar-toggler`} type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             menu <span className={`navbar-toggler-icon`} ></span>
           </button>
@@ -19,7 +19,7 @@ export default function Navbar(props) {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               {!props.auth ? <>
                 <li className="nav-item">
-                  <NavLink className={`nav-link`} to="/home">Home</NavLink>
+                  <NavLink className={`nav-link`} to="/Noxe-MovieDB">Home</NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink className={`nav-link`} to="/movies">Movies</NavLink>

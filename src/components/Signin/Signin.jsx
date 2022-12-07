@@ -27,7 +27,7 @@ export default function Signin() {
     let result = await axiosPost(formData, "signin");
     if (result.message === "success") {
       localStorage.setItem('token', result.token)
-      navigate("/home");
+      navigate("/Noxe-MovieDB");
     } else {
       setloading(true);
       setErrorMsg(result.message);

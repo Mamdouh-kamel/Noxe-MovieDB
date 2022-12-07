@@ -20,7 +20,7 @@ let routes = createBrowserRouter([
     element: <SystemLayout />,
     children: [
       { index: true, element: <ProtectedRoutes ><Home /></ProtectedRoutes> },
-      { path: "home", element: <ProtectedRoutes ><Home /></ProtectedRoutes> },
+      { path: "Noxe-MovieDB", element: <ProtectedRoutes ><Home /></ProtectedRoutes> },
       { path: "movies", element: <ProtectedRoutes ><Movies /></ProtectedRoutes> },
       { path: "details/:id/:media", element: <ProtectedRoutes ><ItemDetails /></ProtectedRoutes> },
       { path: "people", element: <ProtectedRoutes ><People /></ProtectedRoutes> },
