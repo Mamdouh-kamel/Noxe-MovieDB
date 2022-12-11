@@ -6,11 +6,11 @@ export default function Item(props) {
 
  
   let { title, name, poster_path, overview, vote_average, profile_path, id, gender, adult } = props.data;
-  let xxx = name && poster_path || poster_path === null  ? "tv" : title ? "movie" : profile_path || profile_path === null ? 'person' :'' ;
+  let media_type = name && poster_path | poster_path === null  ? "tv" : title && poster_path | poster_path === null ? "movie" : profile_path || profile_path === null ? 'person' :'' ;
   return (
     <>
       <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 mt-4 text-center">
-        <Link className="text-decoration-none text-white" to={`/details/${id}/${xxx}`}>
+        <Link className="text-decoration-none text-white" to={`/details/${id}/${media_type}`}>
 
           <div className={`${Styles.item} position-relative overflow-hidden mb-1`}>
             {poster_path?<img
