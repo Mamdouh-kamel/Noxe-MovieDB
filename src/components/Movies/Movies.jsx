@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Item from "../Item/Item";
+import ItemSearch from "../ItemSearch/ItemSearch";
 import { getSearchData, getTrending } from "../../Api";
 import Loading from "../Loading/Loading";
 import { useSelector } from "react-redux";
@@ -7,28 +8,25 @@ import ReactPaginate from "react-paginate";
 
 export default function Movies() {
   let { searchValue } = useSelector((state) => {
-    return state.Search
-  })
-
+    return state.Search;
+  });
 
   const [Movies, setMovies] = useState([]);
-  const [Search, setSearch] = useState('');
+  const [Search, setSearch] = useState("");
   const [CurrentPage, setCurrentPage] = useState(1);
 
   let handlePageClick = async (data) => {
     // console.log(data.selected);
     let number = await data.selected;
     setCurrentPage(number + 1);
-  }
+  };
   async function getData() {
-
     let movies = await getTrending("movie", CurrentPage);
     setMovies(movies.results);
     // console.log(movies)
-    let search = await getSearchData('movie', searchValue);
+    let search = await getSearchData("movie", searchValue);
     setSearch(search.results);
     // console.log(search);
-
   }
   useEffect(() => {
     getData();
@@ -39,19 +37,17 @@ export default function Movies() {
     <>
       <div className="container">
         <div className="row mt-3">
-          {
-            Search.length > 0 ? Search.map((value, index) => (<Item data={value} key={index} />)) : ''
+          {Search.length > 0 ? Search.map((value, index) => <ItemSearch data={value} key={index} />):
+           Movies.length > 0 ? Movies.map((value, index) => <Item data={value} key={index} movs={true} />):
+           <Loading />
           }
-          {
-            Movies.length > 0 ? Movies.map((value, index) => (<Item data={value} key={index} />)) :
-              <Loading />}
-
+          
         </div>
       </div>
       <ReactPaginate
         previousLabel={"<<"}
-        nextLabel={'>>'}
-        breakLabel={'...'}
+        nextLabel={">>"}
+        breakLabel={"..."}
         pageCount={100}
         marginPagesDisplayed={2}
         onPageChange={handlePageClick}

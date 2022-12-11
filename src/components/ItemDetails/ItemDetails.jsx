@@ -1,7 +1,8 @@
 import React, { Profiler, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getDetails } from "../../Api";
+import { getDetails, getSearchData } from "../../Api";
 import Loading from "../Loading/Loading";
+
 import img1 from '../../imgs/no-image-300x450-1.jpg'
 
 
@@ -12,9 +13,9 @@ export default function ItemDetails() {
   const [Details, setDetails] = useState('');
   
   let { title,name, media_type, birthday, profile_path, popularity, biography, poster_path, overview, vote_average, vote_count, release_date, first_air_date, tagline, genres} = Details;
-  
+
   async function getData() {
-    let details = await getDetails(x.id, media_type === "undefined" ?'person':x.media);
+    let details = await getDetails(x.id, x.media);
     setDetails(details);
   }
   // console.log(Details)
@@ -44,13 +45,16 @@ export default function ItemDetails() {
                 className="w-100"
                 src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
                 alt=""
-              />: profile_path === null ? <img className="w-100" alt="" src={img1}/> :<img className="w-100"
+              />:
+               poster_path === null ? <img className="img-fluid mb-2" src={img1} alt="" />:
+               profile_path  === null? <img className="w-100" alt="" src={img1}/> :
+              <img className="w-100"
               src={`https://image.tmdb.org/t/p/w500/${profile_path}`}
               alt=""/>}
             </div>
             <div className="col-md-8">
-              {popularity && birthday? <h3>{name}</h3> :title?<h3>{title} <span className="text-white-50">({release_date.slice(0,4)})</span></h3>:
-              name?<h3>{name} <span className="text-white-50">({first_air_date.slice(0,4)})</span></h3>:''}
+              {popularity && birthday? <h3>{name}</h3> :title ?<h3>{title} <span className="text-white-50">({release_date ? release_date.slice(0,4):''})</span></h3>:
+              name && first_air_date ?<h3>{name} <span className="text-white-50">({first_air_date ? first_air_date.slice(0,4):''})</span></h3>:<h3>{name}</h3>}
               
               <div>
                 {genres? genres.map((value, index) => (

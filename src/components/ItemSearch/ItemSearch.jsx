@@ -1,22 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Styles from "./Item.module.css";
+import Styles from "./ItemSearch.module.css";
 import img1 from '../../imgs/no-image-300x450-1.jpg'
 export default function Item(props) {
 
-  //media_type === "undefined" ?'person':
-  // = 'undefined' ?'person' :media_type
-  let { title, name, poster_path, overview, vote_average, profile_path, id, media_type } = props.data;
+ 
+  let { title, name, poster_path, overview, vote_average, profile_path, id, gender, adult } = props.data;
+  let xxx = name && poster_path || poster_path === null  ? "tv" : title ? "movie" : profile_path || profile_path === null ? 'person' :'' ;
   return (
     <>
       <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 mt-4 text-center">
-        <Link className="text-decoration-none text-white" to={`/details/${id}/${media_type}`}>
+        <Link className="text-decoration-none text-white" to={`/details/${id}/${xxx}`}>
 
           <div className={`${Styles.item} position-relative overflow-hidden mb-1`}>
             {poster_path?<img
               className="w-100 mb-2"
-              src={poster_path === 'undefined' ? img1 : `https://image.tmdb.org/t/p/w500/${poster_path}`}
+              src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
               alt=""/>:
+              poster_path === null ? <img className="img-fluid mb-2" src={img1} alt="" />:
               profile_path === null?
               <img className="img-fluid mb-2" src={img1} alt=""/>:
               <img className="w-100 mb-2" src={`https://image.tmdb.org/t/p/w500/${profile_path}`} alt=""/>}

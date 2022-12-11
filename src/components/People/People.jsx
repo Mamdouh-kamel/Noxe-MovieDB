@@ -3,6 +3,7 @@ import ReactPaginate from 'react-paginate';
 import { useSelector } from 'react-redux';
 import { getSearchData, getTrending } from '../../Api';
 import Item from '../Item/Item';
+import ItemSearch from '../ItemSearch/ItemSearch';
 import Loading from '../Loading/Loading';
 
 export default function People() {
@@ -26,7 +27,7 @@ export default function People() {
     
     let  people = await getTrending('person', CurrentPage)
     setPeople(people.results)
-    // console.log(people)
+    console.log(people)
     let search = await getSearchData('person', searchValue);
     setSearch(search.results);
     console.log(search);
@@ -40,7 +41,7 @@ export default function People() {
     <>
       <div className="container">
         <div className="row mt-3">
-          {Search.length > 0? Search.map((value, index) => (<Item data={value} key={index}/>)):
+          {Search.length > 0? Search.map((value, index) => (<ItemSearch data={value} key={index}/>)):
           People.length > 0? People.map((value, index) => (<Item data={value} key={index} />)):
           <Loading />}
         </div>

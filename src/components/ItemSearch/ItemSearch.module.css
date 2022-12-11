@@ -1,0 +1,22 @@
+.overlay{
+    top: 100%;
+    transition: 0.5s all ease;
+    
+}
+.item img{
+    transition: 0.3s all ease;
+}
+.item:hover .overlay{
+    top: 0;
+}
+.item:hover .rate{
+    opacity: 0;
+}
+.item:hover img{
+    transform: scale(1.27);
+}
+.rate{
+   border-radius: 15px 0px 15px 15px ;
+   border: 1px solid #fff ;
+   transition: 0.2s all ease;
+}

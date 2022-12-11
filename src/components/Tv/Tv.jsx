@@ -3,6 +3,7 @@ import ReactPaginate from 'react-paginate';
 import { useSelector } from 'react-redux';
 import { getSearchData, getTrending } from '../../Api';
 import Item from '../Item/Item';
+import ItemSearch from '../ItemSearch/ItemSearch';
 import Loading from '../Loading/Loading';
 
 export default function Tv() {
@@ -37,8 +38,8 @@ export default function Tv() {
       <div className="container">
         <div className="row mt-3">
 
-          {Search.length> 0 ? Search.map((value, index) =>(<Item data={value} key={index} />)):
-           Tv.length > 0 ? Tv.map((value, index) => <Item data={value} key={index} />):
+          {Search.length> 0 ? Search.map((value, index) =>(<ItemSearch data={value} key={index} />)):
+           Tv.length > 0 ? Tv.map((value, index) => <Item data={value} key={index} tvs={true} />):
            <Loading />}
         </div>
       </div>
