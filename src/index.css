@@ -29,3 +29,6 @@ a{
 .fa-brands:hover{
     color: darkgray !important;
 }
+label{
+    margin-top: 14px;
+}

@@ -5,7 +5,7 @@ import img1 from '../../imgs/no-image-300x450-1.jpg'
 export default function Item(props) {
 
  
-  let { title, name, poster_path, overview, vote_average, profile_path, id, gender, adult } = props.data;
+  let { title, name, poster_path, overview, vote_average, profile_path, id } = props.data;
   let media_type = name && (poster_path || poster_path === null)  ? "tv" : title && (poster_path || poster_path === null) ? "movie" : profile_path || profile_path === null ? 'person' :'' ;
   return (
     <>
