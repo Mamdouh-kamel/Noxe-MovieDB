@@ -71,7 +71,7 @@ export default function Signup() {
         />
         {errors.first_name ? (
           <span className="text-danger d-block mb-3">
-            {errors.last_name.message}
+            {errors.first_name.message}
           </span>
         ) : (
           ""
